@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Таблица пользователей</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="validate.js"></script> 
+     <script src="ajax.js"></script> 
+  </head>
+  <body>
+    <a href="admin.html" id="fixed-link"><span>+</span> Добавить</a>
+    <div class="main"> 
+      <h2>На этой странице Вы можете ознакомиться с данными пользователей и отсортировать их</h2>   
+     
+      <div class="result"></div>
+
+      <p>Для добавления нового пользователя, необходимо перейти в админку</p>
+
+      <a href="admin.html">Перейти в админку</a>
+    </div>
+
+
+      <div id="popup">
+        
+
+         <form action="update.php" method="post" id="form_index">
+             <a href="#">&times;</a>
+          <p>Здесь Вы можете изменить данные пользователя</p>
+
+            <div>
+              <span>Фамилия</span>
+              <input type="text" name="last_name" class="required_field" required>              
+            </div>  
+            <div>
+              <span>Имя</span>
+              <input type="text" name="first_name" class="required_field" required>              
+            </div>
+            <div>
+              <span>Отчество</span>
+              <input type="text" name="middle_name">              
+            </div>          
+            <div>
+              <span>Статус</span>
+              <select name="status">
+                <option value="Первый">Первый</option>
+                <option value="Второй">Второй</option>
+                <option value="Третий">Третий</option>
+              </select>
+            </div>
+            <div class="msg">            
+            </div>
+           
+            <div>
+              <button id="change_record" type="button">
+                Изменить запись
+              </button>
+              <button id="delete_record" type="button">
+                Удалить запись
+              </button>
+                  
+      </div>
+      <script>
+      $("form a").click(function(e){
+        e.preventDefault;
+        $('#popup').css('display','none');
+      });
+      </script>  
+  </body>
+</html>
