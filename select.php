@@ -16,13 +16,13 @@ if ($_POST['get_header']) {
                 <th>Отчество <button id='m_n_o_a'>&dArr;</button><button id='m_n_o_d'>&uArr;</button></th>
 
                 <th>Статус<button  id='s_1'>1</button><button id='s_2'>2</button>
-                <button id='s_3'>3</button>  <button id='l_n_o_a'>X</button></th>
+                <button id='s_3'>3</button>  <button id='not'>&times;</button></th>
                 
                 <th></th></tr>"; 
 
        
     } else {
-        echo "<h3>В таблице еще нет данных, нужно ее заполнить</h3>";
+        echo "<h4>Здесь ничего нет!</h4>";
     }
  
 } 
@@ -60,7 +60,10 @@ switch ($select) {
         break;
     case 's_3':
         $query_order = "SELECT last_name, first_name, middle_name, status FROM users WHERE status='Третий'";
-        break;        
+        break;
+    case 'not':
+        $query_order = "SELECT last_name, first_name, middle_name, status FROM users";
+        break;                   
 }
 
 echo get_table($query_order, $db);

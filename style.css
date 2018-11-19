@@ -1,6 +1,7 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     position: relative;
+    height: 100vh;
 }
 
 form {
@@ -95,6 +96,11 @@ a:hover {
     padding-top: 0;
 
 }
+
+.main h4 {
+    margin-top: 70px;
+}
+
 table {
    margin: 50px auto; 
 }
@@ -153,11 +159,11 @@ button.active {
     background: white;
     border: 0;
     position: fixed;
-    left: 35%;
+    left: calc(50% - 270px);
 }
 #popup p {
     font-size: 20px;
-    margin-bottom: 0;
+   
 }
 
 #popup div {
@@ -196,7 +202,7 @@ button.active {
     top: 5px;
     left: 50px;
     width: 120px;
-    padding: 10px 15px 15px;
+    padding: 5px 10px 15px;
     color: white;
     background: LightGray;
     border-radius: 10px;

@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Админка</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="validate.js"></script>
+  </head>
+  <body>
+
+
+<form action="send.php" method="post" id="form_admin">
+  
+  <h3>Для регистрации нового пользователя, введите данные и нажмите "Зарегистрировать"</h3>
+  <div>
+    <span>Фамилия</span>
+    <input type="text" name="last_name" class="required_field" required>
+    
+  </div>  
+  <div>
+    <span>Имя</span>
+    <input type="text" name="first_name" class="required_field" required>
+    
+</div>
+
+  <div>
+    <span>Отчество</span>
+    <input type="text" name="middle_name">
+    
+</div>
+ 
+  <div>
+    <span>Статус</span>
+    <select name="status">
+      <option value="Первый">Первый</option>
+      <option value="Второй">Второй</option>
+      <option value="Третий">Третий</option>
+    </select>
+</div>
+
+  <div>
+    <button type="submit">
+      Зарегистрировать
+    </button>
+    <button type="reset">
+      Очистить
+    </button>
+    
+  </div>
+  
+</form>
+
+<a href="index.html">Вернуться на главную</a>
+
+
+</body>
+</html>
